@@ -1,6 +1,8 @@
+@props(['ideas'])
+
 <x-layout title="Ideas">
     <div class="text-white">
-        <div class="text-2xl mb-6">
+        <div class="text-4xl mb-6">
             Ideas
         </div>
 
@@ -13,5 +15,18 @@
                 <button type="submit" class="rounded-md bg-indigo-500 text-white px-3 py-2 text-sm font-semibold cursor-pointer" >Save</button>
             </div>
         </form>
+
+        @if (count($ideas))
+            <div class="mt-8">
+                <h2 class="text-xl">
+                   Already awesome ideas
+                </h2>
+                <ul class="mt-4 ml-4">
+                    @foreach ($ideas as $idea)
+                        <li>- {{ $idea }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
 </x-layout>
