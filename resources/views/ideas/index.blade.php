@@ -24,7 +24,7 @@
                 </h2>
                 <ul class="mt-4 ml-4">
                     @foreach ($ideas as $idea)
-                        <li>- {{ $idea->description }}</li>
+                        <li><a href="/ideas/{{ $idea->id }}" > - {{ $idea->description }}</a></li>
                     @endforeach
                 </ul>
             </div>
