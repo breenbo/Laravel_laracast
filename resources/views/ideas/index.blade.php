@@ -16,14 +16,15 @@
             </div>
         </form>
 
-        @if (count($ideas))
+        <!-- $ideas is now a collection of objects -->
+        @if ($ideas->count())
             <div class="mt-8">
                 <h2 class="text-xl">
                    Already awesome ideas
                 </h2>
                 <ul class="mt-4 ml-4">
                     @foreach ($ideas as $idea)
-                        <li>- {{ $idea }}</li>
+                        <li>- {{ $idea->description }}</li>
                     @endforeach
                 </ul>
             </div>
