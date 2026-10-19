@@ -4,9 +4,9 @@
     <div class="text-white">
         <div class="mt-8">
             <h2 class="text-xl">
-                Idea details
+                Laravel Idea details
             </h2>
-            <div>{{ $idea->description }}</div>
+            <div class="mt-4">{{ $idea->description }}</div>
         </div>
     </div>
 </x-layout>

@@ -3,7 +3,7 @@
 <x-layout title="Ideas">
     <div class="text-white">
         <div class="text-4xl mb-6">
-            Ideas
+            Laravel Ideas
         </div>
 
         <form method="POST" action="/ideas">

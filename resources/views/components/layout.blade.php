@@ -10,7 +10,7 @@
         <title>{{ $title }}</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
-    <body class="bg-neutral-700 p-6 max-w-xl mx-auto">
+    <body class="bg-neutral-700 p-6 max-w-xl ml-8">
 
     {{ $slot }}
 
