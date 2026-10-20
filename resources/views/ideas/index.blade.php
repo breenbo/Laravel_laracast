@@ -5,17 +5,7 @@
         <div class="text-4xl mb-6">
             Laravel Ideas
         </div>
-
-        <form method="POST" action="/ideas">
-            @csrf
-            <legend>Come on, have an idea</legend>
-            <textarea class="mt-3 h-24 w-full bg-white/5" placeholder="Awesome new idea" id="idea" name="idea"></textarea>
-
-            <div class="mt-6">
-                <button type="submit" class="rounded-md bg-indigo-500 text-white px-3 py-2 text-sm font-semibold cursor-pointer" >Save</button>
-            </div>
-        </form>
-
+        <a href="/ideas/create">Create awesome ideas</a>
         <!-- $ideas is now a collection of objects -->
         @if ($ideas->count())
             <div class="mt-8">
