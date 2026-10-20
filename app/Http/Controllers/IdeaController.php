@@ -35,16 +35,12 @@ class IdeaController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        // get the ideas from the post request
-        $idea = request('idea');
-
-        // store the new idea in DB: use table
-        // Facade way
-        // DB::table('ideas')->insert(['description' => $idea]);
-
+        $request -> validate([
+            'description' => ['required','min:10'],
+        ]);
         // Eloquent way
         Idea::create([
-            "description" => $idea,
+            "description" => request('description'),
             "state" => "pending",
         ]);
 

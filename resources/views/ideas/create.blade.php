@@ -9,7 +9,8 @@
         <form method="POST" action="/ideas">
             @csrf
             <legend>Come on, have an idea</legend>
-            <textarea class="mt-3 h-24 w-full bg-white/5" placeholder="Awesome new idea" id="idea" name="idea"></textarea>
+            <textarea class="mt-3 h-24 w-full bg-white/5" placeholder="Awesome new idea" id="description" name="description"></textarea>
+            <x-form.error name="description"/>
 
             <div class="mt-6">
                 <button type="submit" class="rounded-md bg-indigo-500 text-white px-3 py-2 text-sm font-semibold cursor-pointer" >Save</button>
