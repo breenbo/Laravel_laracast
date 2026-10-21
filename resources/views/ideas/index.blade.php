@@ -1,22 +1,22 @@
 @props(['ideas'])
 
 <x-layout title="Ideas">
-    <div class="text-white">
-        <div class="text-4xl mb-6">
-            Laravel Ideas
-        </div>
-        <a href="/ideas/create">Create awesome ideas</a>
+    <div>
         <!-- $ideas is now a collection of objects -->
         @if ($ideas->count())
             <div class="mt-8">
-                <h2 class="text-xl">
-                   Already awesome ideas
+                <h2 class="text-2xl">
+                   Already Awesome ideas
                 </h2>
-                <ul class="mt-4 ml-4">
+                <div class="mt-4 grid grid-cols-2 gap-4">
                     @foreach ($ideas as $idea)
-                        <li><a href="/ideas/{{ $idea->id }}" > - {{ $idea->description }}</a></li>
+                        <a href="/ideas/{{$idea -> id}}" class="card bg-base-100 shadow-sm border border-neutral-200 hover:border-neutral-400">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ $idea -> description }}</h2>
+                            </div>
+                        </a>
                     @endforeach
-                </ul>
+                </div>
             </div>
         @endif
     </div>

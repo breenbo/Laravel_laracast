@@ -1,19 +1,19 @@
 @props(['ideas'])
 
 <x-layout title="Ideas">
-    <div class="text-white">
+    <div>
         <div class="text-4xl mb-6">
-            Laravel Ideas
+            Laravel Ideas - Create
         </div>
 
         <form method="POST" action="/ideas">
             @csrf
-            <legend>Come on, have an idea</legend>
-            <textarea class="mt-3 h-24 w-full bg-white/5" placeholder="Awesome new idea" id="description" name="description"></textarea>
+            <legend>Come on dude, have an idea</legend>
+            <textarea class="textarea mt-4 w-full" placeholder="Awesome new idea" id="description" name="description"></textarea>
             <x-form.error name="description"/>
 
             <div class="mt-6">
-                <button type="submit" class="rounded-md bg-indigo-500 text-white px-3 py-2 text-sm font-semibold cursor-pointer" >Save</button>
+                <button type="submit" class="btn btn-primary" >Save</button>
             </div>
         </form>
     </div>

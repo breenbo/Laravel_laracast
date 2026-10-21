@@ -1,9 +1,9 @@
 @props(['idea'])
 
 <x-layout title="Ideas">
-    <div class="text-white">
+    <div>
         <div class="mt-8">
-            <h2 class="text-xl">
+            <h2 class="text-2xl">
                 Laravel Idea details
             </h2>
             <div class="mt-4">{{ $idea->description }}</div>
