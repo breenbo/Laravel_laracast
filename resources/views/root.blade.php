@@ -1,8 +1,22 @@
 <x-layout title="Root">
-    <div>
-        <div class="text-4xl mb-6">
-            Laravel Ideas Manager
-        </div>
+    <div class="text-center mb-8 text-lg px-8 py-2 border rounded-lg">
+    Project to learn Laravel, following the Laracast BE path.
+    Each commit follow one chapter of Laracast.
 
-        <a href="/ideas" class="text-lg">Go make awesome stuff</a>
+    <div class="text-left mt-4">
+    Done:
+    <ul class="list-disc list-inside">
+        <li>routing</li>
+        <li>connect/store/get data from sqlite</li>
+        <li>register/login/logout</li>
+        <li>route protection</li>
+        <li>add/display ideas attached to logged in user</li>
+    </ul>
+    </div>
+    </div>
+        <a href="/ideas">
+        <div class="text-2xl text-blue-700 text-center w-full">
+            Go create awesome ideas
+        </div>
+        </a>
 </x-layout>
