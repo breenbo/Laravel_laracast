@@ -6,6 +6,7 @@ use App\Models\Idea;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IdeaController extends Controller
 {
@@ -14,7 +15,7 @@ class IdeaController extends Controller
      */
     public function index(): View
     {
-        $ideas = Idea::all();
+        $ideas = Idea::query()->where(['user_id' => Auth::id()])->get();
 
         // pass the ideas array to the ideas view as prop
         return view('ideas.index', [
@@ -41,6 +42,7 @@ class IdeaController extends Controller
         // Eloquent way
         Idea::create([
             "description" => request('description'),
+            "user_id" => Auth::id(),
             "state" => "pending",
         ]);
 

@@ -18,6 +18,13 @@
                     @endforeach
                 </div>
             </div>
+        @else
+            <div class="text-xl mb-4">
+                No idea yet
+            </div>
+            <div class="text-xl text-purple-300">
+                <a href="/ideas/create" class="text-lg">Go make awesome stuff</a>
+            </div>
         @endif
     </div>
 </x-layout>
